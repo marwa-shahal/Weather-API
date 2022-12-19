@@ -1,0 +1,26 @@
+.nav{
+    display: flex;
+    flex-direction:left;
+    background: #7c9ed5;
+  }
+  
+.location{
+    margin:20px;
+    font-family: 'Raleway', sans-serif;
+    background: transparent;
+    border: none;
+    outline:none;
+    font-size:30px;
+    color:white;
+  }
+.location::placeholder{
+    color:white;
+  }
+.search{
+    margin:20px;
+    font-family: 'Raleway', sans-serif;
+    padding:20px;
+    background:#5d7ac1;
+    border:none;
+    font-size:25px;
+  }

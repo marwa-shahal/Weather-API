@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import "./WeatherItem.css";
 
 export default class WeatherItem extends Component {
   render() {
-    return <div>Heello</div>;
-  }
-}
-export class SayHello extends Component {
-  render() {
     return (
-      <div style={{ color: this.props.color, backgroundColor: "yellow" }}>
-        Hello {this.props.name}
+      <div className="hourly_weather">
+        <time datetime={this.props.time}>{this.props.time}</time>
+        <img src={this.props.svg} width="100px" height="150px" />
+        <p>{this.props.temp}</p>
       </div>
     );
   }
