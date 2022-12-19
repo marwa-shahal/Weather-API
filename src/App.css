@@ -1,25 +1,68 @@
-.app {
+.app{
   height: 100vh;
   width: 100vw;
-  transition: background-color 1s ease-in;
+  background:#A5CDF0;
+  overflow: hidden;
+  margin:0 0;
+  font-family: 'Raleway', sans-serif;
 }
 
-.app__header,
-.app__main {
-  width: 100%;
+nav{
   display: flex;
+  flex-direction:left;
+  background: #7c9ed5;
+}
+
+nav input{
+  margin:20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav .location{
+  padding:20px;
+  background: transparent;
+  border: none;
+  outline:none;
+  font-size:25px;
+  color:white;
+}
+.location::placeholder{
+  color:white;
+}
+nav .search{
+  padding:20px;
+  background:#5d7ac1;
+  border:none;
+  font-size:25px;
+}
+ /* 7c9ed5 */
+ /* 010745 */
+
+.current_weather{
+  display:flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ }
+
+.current_weather h2{
+  color:white;
+ }
+
+.current_weather h1 span{ 
+  font-weight: lighter;
+ }
+
+.current_weather p span{
+  margin:20px;
 }
 
-/*  Search bar */
-
-/* Current weather */
-
-div {
-  border: 5px solid red;
+.hourly_weathers{
+  display:flex;
+  justify-content:center;
+}
+.hourly_weather{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  margin:40px
 }
