@@ -9,7 +9,7 @@ export default class WeatherItem extends Component {
         <img src={this.props.imageSrc(this.props.weatherData.weather[0].main.toLowerCase())} width="300px" height="300px" />
         <h2>overcast clouds</h2>
         <h1>
-          Temperature <span>{Math.round(((this.props.weatherData.main.temp_min- 32) * 5/ 9))} to {Math.round(((this.props.weatherData.main.temp_max- 32) * 5/ 9))}°C</span>
+          Temperature <span>{Math.round(this.props.weatherData.main.temp_min- 273.15)} to {Math.round(this.props.weatherData.main.temp_max- 273.15)}°C</span>
         </h1>
         <p>
           <b>Humidity</b> <span>{this.props.weatherData.main.humidity}%</span>
