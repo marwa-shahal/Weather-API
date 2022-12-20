@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Search from "./components/Search";
 import CurrentWeather from "./components/CurrentWeather";
-import HourlyWeather from "./components/HourlyWeather";
-
-import fakeWeatherData from "./fakeWeatherData.json";
+import Weather from "./components/Weather";
+import Clear from "./img/weather-icons/clear.svg"
+import fakeWeatherData from "./data/FakeWeather.json";
 
 import "./App.css";
 
@@ -12,8 +12,8 @@ class App extends Component {
     return (
       <div className="app">
         <Search />
-        <CurrentWeather />
-        <HourlyWeather />
+        {/* <CurrentWeather fakeWeatherData={fakeWeatherData}/> */}
+        <Weather fakeWeatherData={fakeWeatherData} />
       </div>
     );
   }
