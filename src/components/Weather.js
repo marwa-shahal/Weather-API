@@ -15,7 +15,6 @@ import rain from "../img/weather-icons/rain.svg";
 
 export default class Weather extends Component {
   render() {
-   
     const imageSrc = (image) => {
       switch (image) {
         case "clouds":
@@ -39,21 +38,27 @@ export default class Weather extends Component {
       }
     };
     return (
-
       <>
-       <CurrentWeather weatherData = {this.props.weatherData.list[0]}  imageSrc={imageSrc}/>
+        <CurrentWeather
+          weatherData={this.props.weatherData.list[0]}
+          imageSrc={imageSrc}
+        />
         <div className="hourly_weathers">
-          {this.props.weatherData.list.map((elt, index) => (
-            <WeatherItem
-              key = {index}
-              time={elt.dt_txt}
-              svg={elt.weather[0].main.toLowerCase()}
-              temp={elt.main.temp}
-              imageSrc={imageSrc}
-            />
-          ))} 
+          {this.props.weatherData.list.map((elt, index) => {
+            if (index >= 1) {
+              return (
+                <WeatherItem
+                  key={index}
+                  time={elt.dt_txt}
+                  svg={elt.weather[0].main.toLowerCase()}
+                  temp={elt.main.temp}
+                  imageSrc={imageSrc}
+                />
+              );
+            }
+          })}
         </div>
       </>
-    )
+    );
   }
 }
