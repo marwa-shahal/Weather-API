@@ -3,9 +3,8 @@ import clear from "../img/weather-icons/clear.svg";
 import "./Search.css";
 class Search extends React.Component {
   state = {
-    input: "",
+    searchInput: ""
   };
-
   render() {
     return (
       <div className="nav">
@@ -15,13 +14,13 @@ class Search extends React.Component {
           id="input-name"
           placeholder="Type in a city name"
           onChange={(event) => {
-            this.setState({ input: event.target.value });
+            this.setState({ searchInput: event.target.value });
           }}
         />
         <button
           className="search"
           onClick={(event) => {
-            this.props.handleInput(this.state.input);
+            this.props.handleInput(this.state.searchInput);
           }}
         >
           FIND WEATHER
