@@ -1,4 +1,12 @@
-.hourly_weathers{
-    display:flex;
-    justify-content:center;
+.hourly_weathers {
+  display: flex;
+  justify-content: center;
+  background:#A5CDF0;
+}
+
+@media only screen and (max-width: 800px) {
+  .hourly_weathers {
+    flex-wrap: wrap;
   }
+  
+}

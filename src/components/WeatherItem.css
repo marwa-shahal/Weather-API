@@ -4,3 +4,10 @@
   flex-direction: column;
   margin: 40px;
 }
+
+@media only screen and (max-width: 800px) {
+  .hourly_weather{
+    width:20%;
+  }
+}
+

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import WeatherItem from "./WeatherItem.js";
 import CurrentWeather from "./CurrentWeather.js";
 import "./Weather.css";
-
 import clear from "../img/weather-icons/clear.svg";
 import mostlycloudy from "../img/weather-icons/mostlycloudy.svg";
 import partlycloudy from "../img/weather-icons/partlycloudy.svg";

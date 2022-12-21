@@ -4,7 +4,6 @@ import CurrentWeather from "./components/CurrentWeather";
 import Weather from "./components/Weather";
 import Clear from "./img/weather-icons/clear.svg";
 //import fakeWeatherData from "./data/FakeWeather.json";
-
 import "./App.css";
 
 class App extends Component {
@@ -25,7 +24,6 @@ class App extends Component {
     fetch(this.url)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         if (data.cod == 404) {
           alert("Please enter a valid data")
         }
@@ -52,7 +50,6 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        {console.log(this.state.input)}
         <Search handleInput={this.handleInput} />
         {this.state.weatherData ? (
           <Weather weatherData={this.state.weatherData} />
