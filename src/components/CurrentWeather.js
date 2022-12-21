@@ -6,7 +6,7 @@ export default class WeatherItem extends Component {
   render() {
     return (
       <div className="current_weather">
-        <img src={this.props.imageSrc(this.props.weatherData.weather[0].main.toLowerCase())} width="300px" height="300px" />
+        <img src={this.props.imageSrc(this.props.weatherData.weather[0].id)} width="300px" height="300px" />
         <h2>overcast clouds</h2>
         <h1>
           Temperature <span>{Math.round(this.props.weatherData.main.temp_min)} to {Math.round(this.props.weatherData.main.temp_max)}°C</span>

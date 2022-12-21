@@ -15,28 +15,16 @@ import rain from "../img/weather-icons/rain.svg";
 
 export default class Weather extends Component {
   render() {
-    const imageSrc = (image) => {
-      switch (image) {
-        case "clouds":
-          return cloudy;
-        case "mostlycloudy":
-          return mostlycloudy;
-        case "partlycloudy":
-          return partlycloudy;
-        case "snow":
-          return snow;
-        case "storm":
-          return storm;
-        case "rain":
-          return rain;
-        case "fog":
-          return fog;
-        case "drizzle":
-          return drizzle;
-        case "clear":
-          return clear;
-      }
-    };
+    const imageSrc = (id) => {
+        if (id<=805 && id>801){return mostlycloudy;}
+        if (id===801){return partlycloudy;}
+        if (id<=699 && id>=600){return snow;}
+        if (id<=300){return storm;}
+        if (id<=599 && id>=500){return rain;}
+        if (id<=799 && id>=700){return fog;}
+        if (id<=499 && id>300){return drizzle;}
+        if (id===800){return clear;}
+      };
     return (
       <>
         <CurrentWeather
@@ -50,7 +38,7 @@ export default class Weather extends Component {
                 <WeatherItem
                   key={index}
                   time={elt.dt_txt}
-                  svg={elt.weather[0].main.toLowerCase()}
+                  svg={elt.weather[0].id}
                   temp={elt.main.temp}
                   imageSrc={imageSrc}
                 />
